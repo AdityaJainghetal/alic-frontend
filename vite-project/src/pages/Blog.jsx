@@ -82,7 +82,7 @@ const Blog = () => {
     imageFiles.forEach((file) => formData.append('images', file));
  
     try {
-      const api = 'http://localhost:8000/blog/create';
+      const api = 'https://alic-backend.onrender.com/blog/create';
       const response = await axios.post(api, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });

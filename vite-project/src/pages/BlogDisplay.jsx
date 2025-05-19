@@ -15,10 +15,10 @@ const BlogDisplay = ({ tableView = false }) => {
     const fetchData = async () => {
       try {
         if (tableView) {
-          const response = await axios.get('http://localhost:8000/blog/display');
+          const response = await axios.get('https://alic-backend.onrender.com/blog/display');
           setBlogs(response.data);
         } else {
-          const response = await axios.get(`http://localhost:8000/blog/display`);
+          const response = await axios.get(`https://alic-backend.onrender.com/blog/display`);
           setBlog(response.data);
         }
       } catch (err) {
@@ -44,7 +44,7 @@ const BlogDisplay = ({ tableView = false }) => {
 
 //   const handleDelete = async (blogId) => {
 //     try {
-//       await axios.delete(`http://localhost:8000/blog/${blogId}`);
+//       await axios.delete(`https://alic-backend.onrender.com/blog/${blogId}`);
 //       setBlogs(blogs.filter((b) => b._id !== blogId));
 //     } catch (err) {
 //       console.error('Delete failed:', err);

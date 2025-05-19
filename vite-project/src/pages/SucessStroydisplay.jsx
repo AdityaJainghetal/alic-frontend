@@ -8,13 +8,13 @@ const SuccessStoryDisplay = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const api = 'http://localhost:8000/success/display';
+  const api = 'https://alic-backend.onrender.com/success/display';
 
   const deleteStory = async (id) => {
     const confirmDelete = window.confirm('Are you sure you want to delete this success story?');
     if (!confirmDelete) return;
 
-    const deleteApi = `http://localhost:8000/success/${id}`;
+    const deleteApi = `https://alic-backend.onrender.com/success/${id}`;
 
     try {
       await axios.delete(deleteApi);

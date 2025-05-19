@@ -115,7 +115,7 @@ const Course = () => {
     });
 
     try {
-      const response = await axios.post('http://localhost:8000/api/course', formDataToSend, {
+      const response = await axios.post('https://alic-backend.onrender.com/api/course', formDataToSend, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
 

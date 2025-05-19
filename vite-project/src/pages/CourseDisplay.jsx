@@ -8,7 +8,7 @@ const CourseDisplay = () => {
   const [courses, setCourses] = useState([]);
   const [filterText, setFilterText] = useState('');
 
-  const api = 'http://localhost:8000/api/allcourse';
+  const api = 'https://alic-backend.onrender.com/api/allcourse';
 
   useEffect(() => {
     const fetchCourses = async () => {
@@ -28,7 +28,7 @@ const CourseDisplay = () => {
     const confirmDelete = window.confirm('Are you sure you want to delete this course?');
     if (!confirmDelete) return;
 
-    const deleteApi = `http://localhost:8000/api/coursedelte/${id}`;
+    const deleteApi = `https://alic-backend.onrender.com/api/coursedelte/${id}`;
 
     try {
       await axios.delete(deleteApi);

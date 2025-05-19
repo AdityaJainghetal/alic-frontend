@@ -18,7 +18,7 @@ const ContactDisplay = () => {
 
   const fetchEnquiries = async () => {
     try {
-      const response = await fetch('http://localhost:8000/contact/allcontact');
+      const response = await fetch('https://alic-backend.onrender.com/contact/allcontact');
       if (!response.ok) throw new Error('Failed to fetch enquiries');
 
       const data = await response.json();
@@ -39,7 +39,7 @@ const ContactDisplay = () => {
     if (!confirmDelete) return;
 
     try {
-      const response = await fetch(`http://localhost:8000/contact/alldelete/${id}`, {
+      const response = await fetch(`https://alic-backend.onrender.com/contact/alldelete/${id}`, {
         method: 'DELETE',
       });
 

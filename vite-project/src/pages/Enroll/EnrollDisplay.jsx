@@ -16,7 +16,7 @@ const EnrollDisplay = () => {
 
   const fetchEnquiries = async () => {
     try {
-      const response = await fetch('http://localhost:8000/enroll/alldisplay');
+      const response = await fetch('https://alic-backend.onrender.com/enroll/alldisplay');
       if (!response.ok) {
         throw new Error('Failed to fetch enquiries');
       }
@@ -41,7 +41,7 @@ const EnrollDisplay = () => {
     if (!confirm) return;
 
     try {
-      const response = await fetch(`http://localhost:8000/enroll/alldelete/${id}`, {
+      const response = await fetch(`https://alic-backend.onrender.com/enroll/alldelete/${id}`, {
         method: 'DELETE',
       });
 

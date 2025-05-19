@@ -16,7 +16,7 @@ const EnquiryDisplay = () => {
 
   const fetchEnquiries = async () => {
     try {
-      const response = await fetch('http://localhost:8000/enquiry/allcourse');
+      const response = await fetch('https://alic-backend.onrender.com/enquiry/allcourse');
       if (!response.ok) {
         throw new Error('Failed to fetch enquiries');
       }
@@ -41,7 +41,7 @@ const EnquiryDisplay = () => {
     if (!confirm) return;
 
     try {
-      const response = await fetch(`http://localhost:8000/enquiry/coursedelte/${id}`, {
+      const response = await fetch(`https://alic-backend.onrender.com/enquiry/coursedelte/${id}`, {
         method: 'DELETE',
       });
 

@@ -16,7 +16,7 @@ const WhatsNewDisplay = () => {
 
   const fetchWhatsNew = async () => {
     try {
-      const response = await fetch('http://localhost:8000/whatsnew/alldisplay');
+      const response = await fetch('https://alic-backend.onrender.com/whatsnew/alldisplay');
       if (!response.ok) {
         throw new Error('Failed to fetch WhatsNew entries');
       }
@@ -41,7 +41,7 @@ const WhatsNewDisplay = () => {
     if (!confirm) return;
 
     try {
-      const response = await fetch(`http://localhost:8000/whatsnew/delete/${id}`, {
+      const response = await fetch(`https://alic-backend.onrender.com/whatsnew/delete/${id}`, {
         method: 'DELETE',
       });
 
