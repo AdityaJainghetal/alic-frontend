@@ -14,7 +14,7 @@
     "@ckeditor/ckeditor5-react": "^9.5.0",
     "@reduxjs/toolkit": "^2.8.2",
     "@tailwindcss/vite": "^4.1.6",
-    "axios": "^1.9.0",
+    "axios": "^1.13.5",
     "ckeditor5": "^45.1.0",
     "lucide-react": "^0.510.0",
     "react": "^19.1.0",
